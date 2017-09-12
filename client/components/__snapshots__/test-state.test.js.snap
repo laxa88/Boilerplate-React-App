@@ -12,25 +12,7 @@ ShallowWrapper {
     <div>
       0
     </div>
-    <button
-      id="add-button"
-      onClick={[Function]}
-    >
-      add
-    </button>
-     
-    <button
-      id="minus-button"
-      onClick={[Function]}
-    >
-      minus
-    </button>
-  </div>,
-  "nodes": Array [
-    <div>
-      <div>
-        0
-      </div>
+    <p>
       <button
         id="add-button"
         onClick={[Function]}
@@ -44,6 +26,28 @@ ShallowWrapper {
       >
         minus
       </button>
+    </p>
+  </div>,
+  "nodes": Array [
+    <div>
+      <div>
+        0
+      </div>
+      <p>
+        <button
+          id="add-button"
+          onClick={[Function]}
+        >
+          add
+        </button>
+         
+        <button
+          id="minus-button"
+          onClick={[Function]}
+        >
+          minus
+        </button>
+      </p>
     </div>,
   ],
   "options": Object {},
@@ -92,38 +96,42 @@ ShallowWrapper {
           <div>
             0
           </div>
-          <button
-            id="add-button"
-            onClick={[Function]}
-          >
-            add
-          </button>
-           
-          <button
-            id="minus-button"
-            onClick={[Function]}
-          >
-            minus
-          </button>
+          <p>
+            <button
+              id="add-button"
+              onClick={[Function]}
+            >
+              add
+            </button>
+             
+            <button
+              id="minus-button"
+              onClick={[Function]}
+            >
+              minus
+            </button>
+          </p>
         </div>,
         "_debugID": 2,
         "_renderedOutput": <div>
           <div>
             0
           </div>
-          <button
-            id="add-button"
-            onClick={[Function]}
-          >
-            add
-          </button>
-           
-          <button
-            id="minus-button"
-            onClick={[Function]}
-          >
-            minus
-          </button>
+          <p>
+            <button
+              id="add-button"
+              onClick={[Function]}
+            >
+              add
+            </button>
+             
+            <button
+              id="minus-button"
+              onClick={[Function]}
+            >
+              minus
+            </button>
+          </p>
         </div>,
       },
       "_renderedNodeType": 0,
