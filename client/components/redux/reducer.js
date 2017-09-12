@@ -15,7 +15,7 @@ export default function testReducer(state = {}, action) {
     case "LOAD_DATA_FAIL":
       return {
         isLoading: false,
-        isError: true
+        errorMessage: action.message
       }
 
     default:

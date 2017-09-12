@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { loadSomeData } from './redux/action';
 
 class ReduxApp extends React.Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class ReduxApp extends React.Component {
   componentWillMount() {
     console.log("componentWillMount");
 
-    this.props.dispatch({ type: "LOAD_DATA_BEGIN" })
+    this.props.dispatch(loadSomeData("/client/components/mock/dummy-data.json"));
+    this.props.dispatch(loadSomeData("/client/components/mock/non-existent-data.json"));
   }
 
   componentDidMount() {
