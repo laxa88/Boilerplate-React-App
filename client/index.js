@@ -12,8 +12,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
-import ReduxApp from './redux/redux-app';
-import testReducer from './redux/reducer';
+import ReduxApp from './components/redux-app';
+import testReducer from './components/redux/reducer';
 const enhancer = composeWithDevTools();
 const store = createStore(testReducer, enhancer);
 ReactDOM.render(
