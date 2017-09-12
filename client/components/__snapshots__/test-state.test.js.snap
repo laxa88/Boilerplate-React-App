@@ -13,12 +13,14 @@ ShallowWrapper {
       0
     </div>
     <button
+      id="add-button"
       onClick={[Function]}
     >
       add
     </button>
      
     <button
+      id="minus-button"
       onClick={[Function]}
     >
       minus
@@ -30,12 +32,14 @@ ShallowWrapper {
         0
       </div>
       <button
+        id="add-button"
         onClick={[Function]}
       >
         add
       </button>
        
       <button
+        id="minus-button"
         onClick={[Function]}
       >
         minus
@@ -89,12 +93,14 @@ ShallowWrapper {
             0
           </div>
           <button
+            id="add-button"
             onClick={[Function]}
           >
             add
           </button>
            
           <button
+            id="minus-button"
             onClick={[Function]}
           >
             minus
@@ -106,12 +112,14 @@ ShallowWrapper {
             0
           </div>
           <button
+            id="add-button"
             onClick={[Function]}
           >
             add
           </button>
            
           <button
+            id="minus-button"
             onClick={[Function]}
           >
             minus

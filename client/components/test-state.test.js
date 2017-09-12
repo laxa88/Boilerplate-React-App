@@ -12,4 +12,22 @@ describe("test-state.js", () => {
     const wrapper = enzyme.mount(<TestState addLabel="add" minusLabel="minus" />);
     expect(wrapper).toBeDefined();
   });
+
+  it("Should add counter by 1 on click add button", () => {
+    const wrapper = enzyme.mount(<TestState addLabel="add" minusLabel="minus" />);
+    expect(wrapper).toBeDefined();
+
+    const addButton = wrapper.find("#add-button");
+    addButton.simulate("click");
+    expect(wrapper.state().counter).toBe(1);
+  });
+
+  it("Should minus counter by 1 on click minus button", () => {
+    const wrapper = enzyme.mount(<TestState addLabel="add" minusLabel="minus" />);
+    expect(wrapper).toBeDefined();
+
+    const addButton = wrapper.find("#minus-button");
+    addButton.simulate("click");
+    expect(wrapper.state().counter).toBe(-1);
+  });
 });

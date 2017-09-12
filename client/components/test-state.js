@@ -59,8 +59,8 @@ export default class TestState extends React.Component {
     return (
       <div>
         <div>{this.state.counter}</div>
-        <button onClick={this.handleAdd.bind(this)}>{this.props.addLabel}</button>&nbsp;
-        <button onClick={this.handleMinus.bind(this)}>{this.props.minusLabel}</button>
+        <button id="add-button" onClick={this.handleAdd.bind(this)}>{this.props.addLabel}</button>&nbsp;
+        <button id="minus-button" onClick={this.handleMinus.bind(this)}>{this.props.minusLabel}</button>
       </div>
     );
   }
