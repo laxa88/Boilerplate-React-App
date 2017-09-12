@@ -1,5 +1,6 @@
 import React from 'react';
-import TestState from './test-state.js';
+import TestState from './test-state';
+import TestFunction from './test-function';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,12 +19,17 @@ export default class App extends React.Component {
     })
   }
 
+  handleButton() {
+    console.log("custom function (handleButton) called.");
+  }
+
   render() {
     return (
       <div style={{textAlign: 'center'}}>
         <h1>Hello World</h1>
         <button onClick={this.handleUpdateProps.bind(this)}>Update Label Prop</button>
         <TestState addLabel={this.state.addLabel} minusLabel={this.state.minusLabel} />
+        <TestFunction customHandler={this.handleButton.bind(this)} />
       </div>
     );
   }
