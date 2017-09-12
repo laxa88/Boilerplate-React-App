@@ -30,4 +30,12 @@ describe("test-state.js", () => {
     addButton.simulate("click");
     expect(wrapper.state().counter).toBe(-1);
   });
+
+  it("Should have the correct props", () => {
+    const wrapper = enzyme.mount(<TestState addLabel="add" minusLabel="minus" />);
+    expect(wrapper).toBeDefined();
+
+    expect(wrapper.props().addLabel).toBe("add");
+    expect(wrapper.props().minusLabel).toBe("minus");
+  });
 });
