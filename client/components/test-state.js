@@ -55,6 +55,7 @@ export default class TestState extends React.Component {
   }
 
   render() {
+    console.log("render");
     return (
       <div>
         <div>{this.state.counter}</div>
