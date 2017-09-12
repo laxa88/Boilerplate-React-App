@@ -8,7 +8,8 @@ export default function testReducer(state = {}, action) {
 
     case "LOAD_DATA_SUCCESS":
       return {
-        isLoading: false
+        isLoading: false,
+        data: action.data
       }
 
     case "LOAD_DATA_FAIL":
