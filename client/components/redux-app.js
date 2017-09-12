@@ -6,7 +6,7 @@ class ReduxApp extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log("constructor");
+    // console.log("constructor");
   }
 
   // Custom functions
@@ -14,41 +14,54 @@ class ReduxApp extends React.Component {
   // Lifecycle functions
 
   componentWillMount() {
-    console.log("componentWillMount");
+    // console.log("componentWillMount");
 
     this.props.dispatch(loadSomeData("/client/components/mock/dummy-data.json"));
     this.props.dispatch(loadSomeData("/client/components/mock/non-existent-data.json"));
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+    // console.log("componentDidMount");
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("componentWillReceiveProps", nextProps);
+    // console.log("componentWillReceiveProps", nextProps);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate", nextProps, nextState);
+    // console.log("shouldComponentUpdate", nextProps, nextState);
     return true;
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log("componentWillUpdate", nextProps, nextState);
+    // console.log("componentWillUpdate", nextProps, nextState);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate", prevProps, prevState);
+    // console.log("componentDidUpdate", prevProps, prevState);
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount");
+    // console.log("componentWillUnmount");
   }
 
   render() {
+    const data = this.props.state.data;
+    const errorMessage = this.props.state.errorMessage;
+
     return (
       <div style={{textAlign: 'center'}}>
         <h1>Hello Redux World</h1>
+        { data &&
+          data.map((item) => {
+            return (
+              <div key={item.id}>{item.name}</div>
+            )
+          })
+        }
+        { errorMessage &&
+          <div>{ errorMessage }</div>
+        }
       </div>
     );
   }

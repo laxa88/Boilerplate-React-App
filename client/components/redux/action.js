@@ -34,14 +34,13 @@ export function loadSomeData(url) {
         else {
           throw response;
         }
-        console.log(response);
       })
       .then((json) => {
         dispatch(actionFetchSuccess(json));
+        // console.log(json);
       })
       .catch((exception) => {
-        dispatch(actionFetchFail(exception));
-        console.error(exception);
+        dispatch(actionFetchFail(exception.statusText || 'Unknown Error'));
       });
   }
 }

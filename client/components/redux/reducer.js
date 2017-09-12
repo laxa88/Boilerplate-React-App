@@ -1,22 +1,21 @@
 export default function testReducer(state = {}, action) {
   switch (action.type) {
     case "LOAD_DATA_BEGIN":
-      return {
-        isLoading: true,
-        isError: false
-      };
+      return Object.assign({}, state, {
+        isLoading: true
+      });
 
     case "LOAD_DATA_SUCCESS":
-      return {
+      return Object.assign({}, state, {
         isLoading: false,
         data: action.data
-      }
+      });
 
     case "LOAD_DATA_FAIL":
-      return {
+      return Object.assign({}, state, {
         isLoading: false,
-        errorMessage: action.message
-      }
+        errorMessage: action.errorMessage
+      });
 
     default:
       return state;
