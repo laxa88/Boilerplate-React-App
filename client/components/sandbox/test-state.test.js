@@ -1,6 +1,6 @@
-import React from 'react';
-import TestState from './test-state';
-import * as enzyme from 'enzyme';
+import React from "react";
+import * as enzyme from "enzyme";
+import TestState from "./test-state";
 
 describe("test-state.js", () => {
   it("Should shallow render", () => {
