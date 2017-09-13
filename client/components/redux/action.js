@@ -2,27 +2,27 @@
 
 function actionFetch() {
   return {
-    type: "LOAD_DATA_BEGIN"
+    type: "LOAD_DATA_BEGIN",
   };
 }
 
 function actionFetchSuccess(data) {
   return {
     type: "LOAD_DATA_SUCCESS",
-    data: data
+    data,
   };
 }
 
 function actionFetchFail(message) {
   return {
     type: "LOAD_DATA_FAIL",
-    errorMessage: message
-  }
+    errorMessage: message,
+  };
 }
 
 // Actions
 
-export function loadSomeData(url) {
+export default function loadSomeData(url) {
   return (dispatch) => {
     dispatch(actionFetch());
 
@@ -31,16 +31,15 @@ export function loadSomeData(url) {
         if (response.status === 200) {
           return response.json();
         }
-        else {
-          throw response;
-        }
+
+        throw response;
       })
       .then((json) => {
         dispatch(actionFetchSuccess(json));
         // console.log(json);
       })
       .catch((exception) => {
-        dispatch(actionFetchFail(exception.statusText || 'Unknown Error'));
+        dispatch(actionFetchFail(exception.statusText || "Unknown Error"));
       });
-  }
+  };
 }

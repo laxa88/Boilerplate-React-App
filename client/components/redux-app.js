@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { loadSomeData } from './redux/action';
+import loadSomeData from './redux/action';
 
 class ReduxApp extends React.Component {
   constructor(props) {
