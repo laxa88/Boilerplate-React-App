@@ -1,15 +1,15 @@
-import React from 'react';
-import TestFunction from './test-function';
-import * as enzyme from 'enzyme';
+import React from "react";
+import * as enzyme from "enzyme";
+import TestFunction from "./test-function";
 
 describe("test-function.js", () => {
   it("Should shallow render", () => {
-    const wrapper = enzyme.shallow(<TestFunction customHandler={()=>{console.log("WOAH")}} />);
+    const wrapper = enzyme.shallow(<TestFunction customHandler={() => { console.log("WOAH"); }} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it("Should mount", () => {
-    const wrapper = enzyme.mount(<TestFunction customHandler={()=>{console.log("WOAH")}} />);
+    const wrapper = enzyme.mount(<TestFunction customHandler={() => { console.log("WOAH"); }} />);
     expect(wrapper).toBeDefined();
   });
 

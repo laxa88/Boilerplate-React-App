@@ -9,7 +9,7 @@ module.exports = {
   ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // allows .js files to have .jsx syntax
-    "react/jsx-no-bind": [2, { "allowBind": true }],
+    "react/jsx-no-bind": [2, { "allowArrowFunctions": true, "allowBind": true }],
     "import/no-extraneous-dependencies": [1], // ignore error for "config" import alias
     "import/no-unresolved": [1], // ignore error for "config" import alias
     "import/extensions": [1], // ignore error for "config" import alias
