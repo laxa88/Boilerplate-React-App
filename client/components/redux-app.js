@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import loadSomeData from "./redux/action";
+import Sandbox from "./sandbox/sandbox";
 
 class ReduxApp extends React.Component {
   // Lifecycle functions
@@ -52,6 +53,8 @@ class ReduxApp extends React.Component {
         { errorMessage &&
           <div>{ errorMessage }</div>
         }
+        <hr />
+        <Sandbox />
       </div>
     );
   }
