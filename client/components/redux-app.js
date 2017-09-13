@@ -1,48 +1,40 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import loadSomeData from './redux/action';
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import loadSomeData from "./redux/action";
 
 class ReduxApp extends React.Component {
-  constructor(props) {
-    super(props);
-
-    // console.log("constructor");
-  }
-
-  // Custom functions
-
   // Lifecycle functions
 
   componentWillMount() {
-    // console.log("componentWillMount");
-
+    console.log("componentWillMount");
     this.props.dispatch(loadSomeData("/client/components/mock/dummy-data.json"));
     this.props.dispatch(loadSomeData("/client/components/mock/non-existent-data.json"));
   }
 
   componentDidMount() {
-    // console.log("componentDidMount");
+    console.log("componentDidMount");
   }
 
   componentWillReceiveProps(nextProps) {
-    // console.log("componentWillReceiveProps", nextProps);
+    console.log("componentWillReceiveProps", nextProps);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    // console.log("shouldComponentUpdate", nextProps, nextState);
+    console.log("shouldComponentUpdate", nextProps, nextState);
     return true;
   }
 
   componentWillUpdate(nextProps, nextState) {
-    // console.log("componentWillUpdate", nextProps, nextState);
+    console.log("componentWillUpdate", nextProps, nextState);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log("componentDidUpdate", prevProps, prevState);
+    console.log("componentDidUpdate", prevProps, prevState);
   }
 
   componentWillUnmount() {
-    // console.log("componentWillUnmount");
+    console.log("componentWillUnmount");
   }
 
   render() {
@@ -50,14 +42,12 @@ class ReduxApp extends React.Component {
     const errorMessage = this.props.state.errorMessage;
 
     return (
-      <div style={{textAlign: 'center'}}>
+      <div style={{ textAlign: "center" }}>
         <h1>Hello Redux World</h1>
         { data &&
-          data.map((item) => {
-            return (
-              <div key={item.id}>{item.name}</div>
-            )
-          })
+          data.map(item => (
+            <div key={item.id}>{item.name}</div>
+          ))
         }
         { errorMessage &&
           <div>{ errorMessage }</div>
@@ -67,10 +57,15 @@ class ReduxApp extends React.Component {
   }
 }
 
+ReduxApp.propTypes = {
+  state: PropTypes.objectOf(PropTypes.any).isRequired,
+  dispatch: PropTypes.func.isRequired,
+};
+
 function mapStateToProps(state) {
   return {
-    state
-  }
+    state,
+  };
 }
 
-export default connect(mapStateToProps)(ReduxApp)
+export default connect(mapStateToProps)(ReduxApp);
