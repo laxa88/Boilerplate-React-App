@@ -20,7 +20,7 @@ export default class Sandbox extends React.Component {
   }
 
   handleButton() {
-    console.log("custom function (handleButton) called.");
+    console.log("custom function (handleButton) called. (NO REDUX)");
     this.forceUpdate();
   }
 
