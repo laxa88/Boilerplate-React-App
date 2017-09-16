@@ -35,10 +35,11 @@ export default function loadSomeData(url) {
       })
       .then((json) => {
         dispatch(actionFetchSuccess(json));
-        // console.log(json);
       })
       .catch((exception) => {
-        const errorMessage = (exception && exception.statusText) ? exception.statusText : "Unknown Error";
+        const errorMessage = (exception && exception.statusText)
+          ? exception.statusText
+          : "Unknown Error";
         dispatch(actionFetchFail(errorMessage));
       });
   };
