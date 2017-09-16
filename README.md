@@ -1,4 +1,4 @@
-![travis](https://travis-ci.org/laxa88/Boilerplate-React-App.svg?branch=master)
+[![Build Status](https://travis-ci.org/laxa88/Boilerplate-React-App.svg?branch=master)](https://travis-ci.org/laxa88/Boilerplate-React-App)
 
 # Boilerplate React App
 
