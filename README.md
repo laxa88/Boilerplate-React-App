@@ -1,3 +1,5 @@
+![travis](https://travis-ci.org/laxa88/Boilerplate-React-App.svg?branch=master)
+
 # Boilerplate React App
 
 This is a boilerplate project for React, based on [this scotch.io tutorial](https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel).
