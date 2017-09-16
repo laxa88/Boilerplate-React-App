@@ -1,9 +1,8 @@
+# note: node 5 and below are not supported.
+# note: iojs is not supported.
 language: node_js
 node_js:
   - "node"
-  - "iojs"
   - "8"
   - "7"
   - "6"
-  - "5"
-  - "4"
