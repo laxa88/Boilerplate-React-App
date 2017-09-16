@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/laxa88/Boilerplate-React-App.svg?branch=master)](https://travis-ci.org/laxa88/Boilerplate-React-App)
+
 # Boilerplate React App
 
 This is a boilerplate project for React, based on [this scotch.io tutorial](https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel).
@@ -31,3 +33,7 @@ Great for beginners or developers who want to start off with bare minimum enviro
   - Refer to `package.json` to add/modify commands in the `scripts` property.
   - `npm run start` - Starts development server on (default) localhost:8080
   - `npm run build` - Builds and generates a production `bundle.js` in the `dist` folder.
+
+## Releases
+
+As this repo may potentially grow with additional code that makes it less boilerplate-y, check the "Releases" tab for older versions.
