@@ -35,15 +35,4 @@ describe("test-function-redux.js", () => {
 
     expect(wrapper).toBeDefined();
   });
-
-  // it("Should call the custom callback function that was passed in as prop", () => {
-  //   const spy = jest.fn();
-
-  //   const wrapper = enzyme.mount(<TestFunction customHandler={spy} />);
-  //   expect(wrapper).toBeDefined();
-
-  //   const addButton = wrapper.find("#callback-button");
-  //   addButton.simulate("click");
-  //   expect(spy).toHaveBeenCalled();
-  // });
 });

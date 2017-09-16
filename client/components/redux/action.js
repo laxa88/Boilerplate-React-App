@@ -26,12 +26,11 @@ export default function loadSomeData(url) {
   return (dispatch) => {
     dispatch(actionFetch());
 
-    fetch(url)
+    return fetch(url)
       .then((response) => {
         if (response.status === 200) {
           return response.json();
         }
-
         throw response;
       })
       .then((json) => {
@@ -39,7 +38,8 @@ export default function loadSomeData(url) {
         // console.log(json);
       })
       .catch((exception) => {
-        dispatch(actionFetchFail(exception.statusText || "Unknown Error"));
+        const errorMessage = (exception && exception.statusText) ? exception.statusText : "Unknown Error";
+        dispatch(actionFetchFail(errorMessage));
       });
   };
 }
